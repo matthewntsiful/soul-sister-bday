@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, Soul Sister! 🌸</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+</head>
+<body>
+    <audio id="bg-music" loop>
+        <source src="assets/music/birthday-song.mp3" type="audio/mpeg">
+        Your browser does not support audio
+    </audio>
+    <button id="music-toggle" class="music-btn">🎵</button>
+
+    <section class="hero-section">
+        <div class="content">
+            <h1 class="title">Happy Birthday, Beautiful Soul! 🌟</h1>
+            <button class="cta-button">Open Your Special Message 💌</button>
+        </div>
+    </section>
+
+    <section class="gallery-section">
+        <div class="gallery-container">
+            <a href="assets/gallery/1.jpg" data-lightbox="gallery" class="gallery-item" style="background-image: url('assets/gallery/1.jpg')"></a>
+            <a href="assets/gallery/2.jpg" data-lightbox="gallery" class="gallery-item" style="background-image: url('assets/gallery/2.jpg')"></a>
+            <a href="assets/gallery/3.jpg" data-lightbox="gallery" class="gallery-item" style="background-image: url('assets/gallery/3.jpg')"></a>
+            <a href="assets/gallery/4.jpg" data-lightbox="gallery" class="gallery-item" style="background-image: url('assets/gallery/4.jpg')"></a>
+        </div>
+    </section>
+
+    <section class="poem-section">
+        <div class="poem-container">
+            <!-- Personalized Message Content Here -->
+            <h2 class="poem-title">To My Beloved Soul Sister on Your Birthday</h2>
+            <div class="poem-text">
+                <p>To the one who knows my heart without me speaking a word,</p>
+                <p>Who has held my hand through storms and sunshine alike,</p>
+                <p>Today, I celebrate not just your birth, but the blessing your life has been to mine.</p>
+
+                <p class="spacer">✦</p>
+
+                <p>Through the darkest valleys and the highest peaks,</p>
+                <p>You've remained steadfast—a constant in a world of change.</p>
+                <p>Your strength has been my shelter,</p>
+                <p>Your wisdom, my guiding light,</p>
+                <p>Your laughter, the melody that brightens my darkest days.</p>
+
+                <p class="spacer">✦</p>
+
+                <p>When words failed me, you understood my silence.</p>
+                <p>When tears fell, you caught them with grace.</p>
+                <p>When joy overflowed, you celebrated as if it were your own.</p>
+                <p>This is what makes you extraordinary—this gift of true presence.</p>
+
+                <div class="wishes">
+                    <p>On your birthday, I wish for you everything your generous heart deserves:</p>
+                    <p>May your days be filled with moments that take your breath away,</p>
+                    <p>May your path be lined with people who love you as deeply as you love others,</p>
+                    <p>May your dreams find wings and soar beyond even your wildest imagination.</p>
+                </div>
+
+                <div class="blessings">
+                    <p>May the universe conspire to bless you beyond measure—</p>
+                    <p>With health that never wavers,</p>
+                    <p>With peace that surpasses understanding,</p>
+                    <p>With joy that bubbles from within,</p>
+                    <p>With love that wraps around you like the warmest embrace.</p>
+                </div>
+
+                <p class="closing">For all the times you've been my anchor, my confidante, my sister by soul if not by blood—<br>
+                I am eternally grateful that our paths intertwined.</p>
+
+                <div class="final-greeting">
+                    <p>Happy Birthday to the most beautiful soul I know.</p>
+                    <p>May this year bring you abundant blessings, unexpected miracles,<br>
+                    and the knowledge that you are treasured beyond words.</p>
+                </div>
+
+                <div class="signature">
+                    <p>With all my love,</p>
+                    <p>Matthew</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script>
+        // Smooth scroll
+        document.querySelector('.cta-button').addEventListener('click', () => {
+            document.querySelector('.poem-section').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // Music toggle
+        const music = document.getElementById('bg-music');
+        const toggleBtn = document.getElementById('music-toggle');
+        toggleBtn.addEventListener('click', () => {
+            music.paused ? music.play() : music.pause();
+            toggleBtn.classList.toggle('music-playing');
+        });
+
+        // Initialize lightbox
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true,
+            'albumLabel': "Photo %1 of %2"
+        });
+    </script>
+</body>
+</html>
