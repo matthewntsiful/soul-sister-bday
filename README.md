@@ -1,23 +1,21 @@
 # Static Website Hosting Using Docker
 
-<div align="center">
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white" alt="Nginx" />
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
-  <img src="https://img.shields.io/badge/GitHub_Pages-222222?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Pages" />
-</div>
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Nginx](https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-222222?style=for-the-badge&logo=github&logoColor=white)
 
 A containerized static website implementation showcasing modern web development and DevOps practices. Features responsive design, interactive elements, media integration, and optimized Nginx configuration for production deployment.
 
 ## Live Demo
 
-<div align="center">
-  <h3>🎉 This project is hosted on GitHub Pages 🎉</h3>
-  <h2><a href="https://matthewntsiful.github.io/soul-sister-bday/" target="_blank">https://matthewntsiful.github.io/soul-sister-bday/</a></h2>
-  <p>Visit the link above to see the live birthday celebration website!</p>
-</div>
+🎉 **This project is hosted on GitHub Pages** 🎉
+
+**[https://matthewntsiful.github.io/soul-sister-bday/](https://matthewntsiful.github.io/soul-sister-bday/)**
+
+Visit the link above to see the live birthday celebration website!
 
 ## Table of Contents
 
@@ -27,7 +25,7 @@ A containerized static website implementation showcasing modern web development 
 4. [Configuration](#configuration)
 5. [Usage](#usage)
 6. [Project Structure](#project-structure)
-7. [Customization](#customization)
+7. [Customization and Extension](#customization-and-extension)
 8. [Troubleshooting](#troubleshooting)
 
 ## Overview
@@ -35,6 +33,7 @@ A containerized static website implementation showcasing modern web development 
 This project demonstrates a modern approach to static website hosting using Docker and Nginx. It implements industry best practices for containerization, web server configuration, and front-end development to create a production-ready web application that can be deployed anywhere Docker is available.
 
 **Key Features:**
+
 - Containerized deployment using Docker for consistent environments across development and production
 - Optimized Nginx configuration with proper caching, compression, and security settings
 - Responsive design implementation using modern CSS techniques
@@ -45,7 +44,7 @@ This project demonstrates a modern approach to static website hosting using Dock
 
 ## Architecture
 
-```
+```text
 ┌─────────────────────────────────────────────────────────────┐
 │                        Docker Host                          │
 │                                                             │
@@ -113,18 +112,20 @@ This project demonstrates a modern approach to static website hosting using Dock
 ### Setup
 
 1. Clone the repository:
+
    ```bash
    git clone <repository-url>
    cd soul-sister-bday
    ```
 
 2. Start the application:
+
    ```bash
    docker-compose up -d
    ```
 
 3. Access the website:
-   - Birthday website: http://localhost:8080
+   - Birthday website: [http://localhost:8080](http://localhost:8080)
 
 ## Configuration
 
@@ -176,7 +177,7 @@ services:
 
 ### Viewing the Birthday Website
 
-1. Access the website at http://localhost:8080
+1. Access the website at [http://localhost:8080](http://localhost:8080)
 2. View the main hero section with the birthday greeting
 3. Click the "Open Your Special Message" button to scroll to the personalized message
 4. Browse through the photo gallery (click on images to view them in a lightbox)
@@ -184,7 +185,7 @@ services:
 
 ## Project Structure
 
-```
+```text
 soul-sister-bday/
 ├── assets/
 │   ├── gallery/
