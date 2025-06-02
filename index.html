@@ -8,11 +8,11 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
 </head>
 <body>
-    <audio id="bg-music" loop>
+    <audio id="bg-music" loop preload="none">
         <source src="assets/music/birthday-song.mp3" type="audio/mpeg">
         Your browser does not support audio
     </audio>
-    <button id="music-toggle" class="music-btn">🎵</button>
+    <button id="music-toggle" class="music-btn" aria-label="Toggle background music">🎵</button>
 
     <section class="hero-section">
         <div class="content">
@@ -23,10 +23,10 @@
 
     <section class="gallery-section">
         <div class="gallery-container">
-            <a href="assets/gallery/1.jpg" data-lightbox="gallery" class="gallery-item" style="background-image: url('assets/gallery/1.jpg')"></a>
-            <a href="assets/gallery/2.jpg" data-lightbox="gallery" class="gallery-item" style="background-image: url('assets/gallery/2.jpg')"></a>
-            <a href="assets/gallery/3.jpg" data-lightbox="gallery" class="gallery-item" style="background-image: url('assets/gallery/3.jpg')"></a>
-            <a href="assets/gallery/4.jpg" data-lightbox="gallery" class="gallery-item" style="background-image: url('assets/gallery/4.jpg')"></a>
+            <a href="assets/gallery/1.jpg" data-lightbox="gallery" class="gallery-item gallery-item-1" aria-label="Birthday gallery image 1"></a>
+            <a href="assets/gallery/2.jpg" data-lightbox="gallery" class="gallery-item gallery-item-2" aria-label="Birthday gallery image 2"></a>
+            <a href="assets/gallery/3.jpg" data-lightbox="gallery" class="gallery-item gallery-item-3" aria-label="Birthday gallery image 3"></a>
+            <a href="assets/gallery/4.jpg" data-lightbox="gallery" class="gallery-item gallery-item-4" aria-label="Birthday gallery image 4"></a>
         </div>
     </section>
 
@@ -88,24 +88,26 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
     <script>
-        // Smooth scroll
-        document.querySelector('.cta-button').addEventListener('click', () => {
-            document.querySelector('.poem-section').scrollIntoView({ behavior: 'smooth' });
-        });
+        document.addEventListener('DOMContentLoaded', () => {
+            // Smooth scroll
+            document.querySelector('.cta-button').addEventListener('click', () => {
+                document.querySelector('.poem-section').scrollIntoView({ behavior: 'smooth' });
+            });
 
-        // Music toggle
-        const music = document.getElementById('bg-music');
-        const toggleBtn = document.getElementById('music-toggle');
-        toggleBtn.addEventListener('click', () => {
-            music.paused ? music.play() : music.pause();
-            toggleBtn.classList.toggle('music-playing');
-        });
+            // Music toggle
+            const music = document.getElementById('bg-music');
+            const toggleBtn = document.getElementById('music-toggle');
+            toggleBtn.addEventListener('click', () => {
+                music.paused ? music.play() : music.pause();
+                toggleBtn.classList.toggle('music-playing');
+            });
 
-        // Initialize lightbox
-        lightbox.option({
-            'resizeDuration': 200,
-            'wrapAround': true,
-            'albumLabel': "Photo %1 of %2"
+            // Initialize lightbox
+            lightbox.option({
+                'resizeDuration': 200,
+                'wrapAround': true,
+                'albumLabel': "Photo %1 of %2"
+            });
         });
     </script>
 </body>
