@@ -76,6 +76,22 @@ body {
     cursor: pointer;
 }
 
+.gallery-item-1 {
+    background-image: url('assets/gallery/1.jpg');
+}
+
+.gallery-item-2 {
+    background-image: url('assets/gallery/2.jpg');
+}
+
+.gallery-item-3 {
+    background-image: url('assets/gallery/3.jpg');
+}
+
+.gallery-item-4 {
+    background-image: url('assets/gallery/4.jpg');
+}
+
 .gallery-item:hover {
     transform: scale(1.05);
 }
